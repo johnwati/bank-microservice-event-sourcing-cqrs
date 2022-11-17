@@ -3,7 +3,10 @@
     Modeling a Bank Account and its TransactionsIn this example, we will have bank accounts, credit lines, and payments
     (debit and credit payments), and we always want to know the actual account balance and whether a pending debit would exceed the overdraft limit of a bank account. 
 ## Solution
-
+### Requirements
+    1. Springboot
+    2. Java 16
+    3. Maven
 ### Architecture
 ![Alt text](Architecture+Overview.drawio.png?raw=true "Title")
 ### APIs
@@ -114,7 +117,7 @@ find some definitions of the important technologies used in this program.
     1. Change Query API from REST to GraphQL(for better searching and to reduce the number of APIS)
     2. Add Pagination to Rest API
     3. Add Accounting( Debit and Credit API)
-    4. Add Negative tests
+    4.  Refine Test cases
 
 # Assumptions
     1. Accounting is done outside this application

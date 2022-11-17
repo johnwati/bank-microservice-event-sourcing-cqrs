@@ -11,3 +11,6 @@ docker run -it -d --name adminer -p 8080:8080 --network techbanknet -e ADMINER_D
 
 
 # docker pull adminer
+
+
+docker run -p 86:8080 -e bootstrapServers="127.0.0.1:9092" consdata/kouncil:latest

@@ -41,6 +41,7 @@ public class TransactionLookupController  {
         try{
 
             List<AccountTransaction> transactionList = queryDispatcher.send(new FindTransactionByAccountId(id));
+            System.out.println("===accountNumber"+id+" "+transactionList.size());
             if(transactionList ==null || transactionList.size() == 0){
                 return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
             }
@@ -60,6 +61,7 @@ public class TransactionLookupController  {
     public ResponseEntity<TransactionLookupResponse> findTransactionsByAccountNumber(@PathVariable(value = "accountNumber") Integer accountNumber){
         try{
             List<BankAccount> accounts = queryDispatcher.send(new FindAccountByAccountNumber(accountNumber));
+            System.out.println("===accountNumber"+accountNumber);
             System.out.println("======"+accounts.toString());
             if(accounts.size() <= 0){
                 var safeErrorMessage = "Account Number Not Found";

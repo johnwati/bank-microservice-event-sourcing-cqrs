@@ -50,3 +50,5 @@ spring:
           json:
             trusted:
               packages: '*'
+
+  spring.main.allow-circular-references: true

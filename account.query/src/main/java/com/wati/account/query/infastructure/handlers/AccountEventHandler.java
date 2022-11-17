@@ -19,7 +19,7 @@ import java.util.UUID;
 @Service
 public class AccountEventHandler implements EventHandler {
 
-    private AccountRepository accountRepository;
+    private final AccountRepository accountRepository;
 
     private final AccountTransactionRepository accountTransactionRepository;
 
